@@ -4,27 +4,40 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    public ParticleSystem explosionParticle;
+
+    public int pointValue;
+
     private Rigidbody targetRb;
+
     private float minSpeed = 12;
+
     private float maxSpeed = 16;
+
     private float maxTorque = 10;
+
     private float xRange = 4;
+
     private float ySpawnPos = -6;
-    
 
     private void Start()
     {
         targetRb = GetComponent<Rigidbody>();
 
         targetRb.AddForce(RandomForce(), ForceMode.Impulse);
+
         targetRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
 
         transform.position = RandomSpawnPos();
+
+        
     }
 
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        GameManager.instance.UpdateScore(pointValue);
+        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
     }
 
     private void OnTriggerEnter(Collider other)
