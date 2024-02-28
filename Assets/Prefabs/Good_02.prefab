@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.0818, y: 2.8013, z: 0.0542}
-  m_LocalScale: {x: 0.43988654, y: 0.4246452, z: 0.4418804}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.47, y: 0.5031385, z: 0.49515024}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -147,4 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 3199346384015752365, guid: 307229a5540374aae98859caad2128a3, type: 3}
-  pointValue: 40
+  pointValue: 30
